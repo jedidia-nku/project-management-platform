@@ -60,8 +60,7 @@ Follow the instructions below to set up and run the project on your local machin
 
     ```plaintext
     MONGO_URI=<your_mongo_database_uri>
-    PORT=5000
-    JWT_SECRET=<your_jwt_secret_key>
+    PORT=3000
     ```
 
 ### Running the Application
@@ -89,8 +88,7 @@ project-management-platform/
 ├── backend/               # Backend code (Node.js + Express)
 │   ├── models/            # MongoDB models
 │   ├── routes/            # API routes
-│   ├── controllers/       # Business logic
-│   ├── middlewares/       # Middleware functions
+│   ├── .env
 │   └── server.js          # Entry point for the backend server
 ├── frontend/              # Frontend code (React.js + TypeScript)
 │   ├── src/
