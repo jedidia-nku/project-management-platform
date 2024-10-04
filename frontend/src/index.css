@@ -1,0 +1,589 @@
+/* Global styles for the app */
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: #f5f5f5;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #1a73e8;
+    color: white;
+    height: 100vh;
+    padding: 20px 10px;
+  }
+  
+  .sidebar a {
+    display: block;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .sidebar a:hover {
+    background-color: #4285f4;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f1f1f1;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1a73e8;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #4285f4;
+  }
+  
+  /* index.css */
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Cards styling */
+  .dashboard-cards {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    padding: 20px;
+    flex: 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card h2 {
+    color: #333;
+    font-size: 1.2em;
+  }
+  
+  .card p {
+    font-size: 2em;
+    color: #1a73e8;
+  }
+  
+  /* Activity Log Styling */
+  .activity-log {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .activity-log h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+  
+  .table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+
+/* Project List Container */
+.project-list-container {
+    padding: 20px;
+    background-color: #f9fafb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-list-title {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Project Cards Container */
+  .project-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Project Card Styling */
+  .project-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-card h3 {
+    color: #1a73e8;
+    margin-bottom: 10px;
+  }
+  
+  .project-description {
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .project-owner,
+  .project-dates {
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* Project Status Styling */
+  .project-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 0.9em;
+  }
+  
+  /* Status Colors */
+  .project-card.active .project-status {
+    background-color: #1a73e8;
+  }
+  
+  .project-card.completed .project-status {
+    background-color: #34a853;
+  }
+  
+  .project-card.pending .project-status {
+    background-color: #fbbc05;
+  }
+  
+/* User Management Container */
+.user-management-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title Styling */
+  .user-management-container h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* User Table Styling */
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-table th, .user-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Table Header Styling */
+  .user-table th {
+    background-color: #f1f1f1;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Table Row Styling */
+  .user-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Button Styles */
+  .edit-btn, .remove-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  /* Edit Button Styling */
+  .edit-btn {
+    background-color: #4CAF50;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Remove Button Styling */
+  .remove-btn {
+    background-color: #f44336;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /*Organization 
+  /* src/components/Organizations.css */
+
+.organizations-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.organizations-container h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.organizations-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.organization-card {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.organization-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.organization-card h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.organization-card p {
+  font-size: 1em;
+  color: #666;
+  margin: 5px 0;
+}
+
+.organization-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: background-color 0.3s ease;
+}
+
+.btn.view-btn {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.btn.view-btn:hover {
+  background-color: #2980b9;
+}
+
+.btn.add-user-btn {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.btn.add-user-btn:hover {
+  background-color: #27ae60;
+}
+
+.btn.manage-role-btn {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn.manage-role-btn:hover {
+  background-color: #d35400;
+}
+
+/* OrganizationDetail.css */
+.organization-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.organization-container h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.organization-container p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #7f8c8d;
+}
+
+.projects-section,
+.users-section {
+  margin-bottom: 30px;
+}
+
+.projects-section h2,
+.users-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #3498db;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #2980b9;
+}
+
+.projects-section ul,
+.users-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects-section li,
+.users-section li {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-section li:hover,
+.users-section li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.projects-section h3,
+.users-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #34495e;
+}
+
+.projects-section p,
+.users-section p {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+.projects-section li p:last-of-type,
+.users-section li p:last-of-type {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.organization-container .loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #7f8c8d;
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dimmed background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.user-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.user-item {
+  margin: 10px 0;
+}
+
+.user-select-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-select-btn:hover {
+  background-color: #2980b9;
+}
+
+.close-btn {
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #c0392b;
+}
+
+/* OrganizationForm Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal label {
+  margin: 10px 0;
+}
+
+.modal input,
+.modal textarea {
+  padding: 8px;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.modal button {
+  margin: 10px 0;
+}

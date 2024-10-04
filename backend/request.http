@@ -1,0 +1,83 @@
+### Create a new user
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "name": "Jedida",
+  "email": "didiermin@gmail.com",
+  "role": "admin",
+  "password": "securepassword"
+}
+
+### Get all users
+GET http://localhost:3000/api/users
+
+### Get user by ID
+GET http://localhost:3000/api/users/66fc286e69676acad7cf76ed
+
+### Create a new organization
+POST http://localhost:3000/api/organizations/
+Content-Type: application/json
+
+{
+  "name": "Kigali",
+  "description": "Description of the organizations"
+}
+
+### Get all organizations
+
+Get http://localhost:3000/api/organizations/allOrganizations
+
+### Get organization by Id
+Get http://localhost:3000/api/organizations/66fe9086b3bd1ab303a002d9
+
+### Add user to organization
+POST http://localhost:3000/api/organizations/66fe9086b3bd1ab303a002d9/users
+Content-Type: application/json
+
+{
+  "userId": "66fe80702807088be768a4f5",
+  "name": "Jedidia",
+  "role": "admin"
+}
+
+### Change user role in organization
+PUT http://localhost:3000/api/organizations/66fc3d3d4d6a1ab8e988c225/users/66fc286e69676acad7cf76ed
+Content-Type: application/json
+
+{
+  "role": "viewer"
+}
+
+### Create a new project
+POST http://localhost:3000/api/projects
+Content-Type: application/json
+
+{
+  "projName": "Typescript Course",
+  "description": "Description of the project",
+  "organizationId": "66fe9086b3bd1ab303a002d9",
+  "ownerId": "66fe80702807088be768a4f5",
+  "name": "Jedidia"
+}
+
+### Update a project
+PUT http://localhost:3000/api/projects/66fc3fb14d6a1ab8e988c238
+Content-Type: application/json
+
+{
+  "projName": "Javascript",
+  "description": "Updated description",
+  "userId": "66fc286e69676acad7cf76ed",
+  "name": "Jedidia"
+}
+
+### Delete a project
+DELETE http://localhost:3000/api/projects/66fc238269676acad7cf76dd
+Content-Type: application/json
+
+### Get all projects for a user
+GET http://localhost:3000/api/projects/user/66fc286e69676acad7cf76ed
+
+### Get all projects
+GET http://localhost:3000/api/projects/allProjects
