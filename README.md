@@ -101,6 +101,7 @@ project-management-platform/
 │   │   └── index.css      # CSS of the Application
 │   │   └── main.tsx 
 └── README.md              # Project documentation
+```
 
 ## Future Enhancements
 
