@@ -121,5 +121,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For any questions or feedback, feel free to reach out:
 
 - Email: [jedidia.nk@gmail.com](mailto:jedidia.nk@gmail.com)
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/nkunzumwami-jedidia-a35b56258)
+- LinkedIn: [Nkunzumwami Jedidia](https://www.linkedin.com/in/nkunzumwami-jedidia-a35b56258)
+
 
